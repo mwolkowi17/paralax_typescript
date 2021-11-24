@@ -5,5 +5,6 @@ export function sun(): THREE.Mesh{
     
     const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0xffff7f});
     const sphere: THREE.Mesh = new THREE.Mesh(geometry,material);
+    sphere.position.y=6
     return sphere;
 }

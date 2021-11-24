@@ -1,8 +1,7 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { blueSky } from './sky'
-import { sun } from './sun'
-
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { Layer1 } from './layer1';
+import { Layer2 } from './layer2';
 const scene = new THREE.Scene()
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -14,10 +13,10 @@ document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
 
+scene.add(Layer1);
+scene.add(Layer2);
 
 
-scene.add(blueSky());
-scene.add(sun());
 
 window.addEventListener('resize', onWindowResize, false)
 
