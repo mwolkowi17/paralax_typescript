@@ -16,7 +16,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableRotate=false;
+controls.enableRotate=true;
 
 scene.add(Layer1);
 scene.add(Layer2);
