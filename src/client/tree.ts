@@ -5,17 +5,18 @@ function UpperThree():THREE.Mesh{
     
     const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0x008000});
     const sphere: THREE.Mesh = new THREE.Mesh(geometry,material);
-    //sphere.position.y=12.5
+    sphere.position.y=1.2;
     //sphere.position.x=4
     return sphere;
 }
 
-export function tree():THREE.Mesh{
-    const geometry: THREE.CylinderGeometry = new THREE.CylinderGeometry(5, 5, 20, 32);
+export function tree(x:number):THREE.Mesh{
+    const geometry: THREE.CylinderGeometry = new THREE.CylinderGeometry(0.2, 0.2,1.5, 32);
     
-    const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0x008000});
+    const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0x8B4513});
     const cylinder: THREE.Mesh = new THREE.Mesh(geometry,material);
-    //sphere.position.y=12.5
-    //sphere.position.x=4
+    cylinder.position.x=x
+    cylinder.position.y=-2.3;
+    cylinder.add(UpperThree());
     return cylinder;
 }

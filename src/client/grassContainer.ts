@@ -17,6 +17,7 @@ export function grassContainer(): THREE.Object3D {
         object.add(Leaf((getRandomInt(-7, 7)+getRandomInt(-100,100)/100), (getRandomInt(-1, 4)+getRandomInt(-100,100)/100)));
         r++
     }
-    object.add(tree());
+    object.add(tree(2));
+    object.add(tree(4))
     return object;
 }
