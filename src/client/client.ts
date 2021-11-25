@@ -4,11 +4,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Layer1 } from './layer1';
 import { Layer2 } from './layer2';
 import { Layer3 } from './layer3';
+import { Layer4 } from './layer4';
 const scene = new THREE.Scene()
 scene.background=new THREE.Color(0x7fbfff)
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-camera.position.z = 12;
+camera.position.z = 14.5;
 
 const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
@@ -20,6 +21,7 @@ controls.enableRotate=false;
 scene.add(Layer1);
 scene.add(Layer2);
 scene.add(Layer3);
+scene.add(Layer4);
 
 
 
