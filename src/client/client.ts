@@ -48,4 +48,16 @@ function animate() {
 function render() {
     renderer.render(scene, camera)
 }
+
+const maindocument: HTMLElement = document.body;
+
+
+let x:number = 0;
+let y:number = 0
+maindocument.addEventListener('mousemove',e=>{
+x=e.offsetX;
+y=e.offsetY
+console.log(x,y)
+})
+
 animate()
