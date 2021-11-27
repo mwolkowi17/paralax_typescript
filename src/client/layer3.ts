@@ -1,8 +1,7 @@
 import * as THREE from 'three'
-import { Mountain2 } from './mountain2'
-import { Mountain3 } from './mountain3';
+import { Mountain } from './mountain';
 
 export const Layer3: THREE.Group = new THREE.Group
 Layer3.position.z=5;
-Layer3.add(Mountain2());
-Layer3.add(Mountain3());
+Layer3.add(Mountain(5,6,6.5,0))
+Layer3.add(Mountain(4.5,6,-7.5,0))

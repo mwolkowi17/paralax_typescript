@@ -5,6 +5,7 @@ import { Layer1 } from './layer1';
 import { Layer2 } from './layer2';
 import { Layer3 } from './layer3';
 import { Layer4 } from './layer4';
+
 const scene = new THREE.Scene()
 scene.background=new THREE.Color(0x7fbfff)
 
@@ -16,7 +17,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableRotate=true;
+controls.enableRotate=false;
 
 scene.add(Layer1);
 scene.add(Layer2);
@@ -57,7 +58,10 @@ let y:number = 0
 maindocument.addEventListener('mousemove',e=>{
 x=e.offsetX;
 y=e.offsetY
-console.log(x,y)
+Layer2.position.x=x/1000;
+Layer3.position.x=x/800;
+Layer4.position.x=x/600
+
 })
 
 animate()

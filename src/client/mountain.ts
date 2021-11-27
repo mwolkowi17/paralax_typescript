@@ -1,11 +1,12 @@
+
 import * as THREE from 'three'
 
 
-export function Mountain1(): THREE.Mesh {
-    const geometry: THREE.ConeGeometry = new THREE.ConeGeometry(10, 12, 32);
+export function Mountain(x:number,y:number, posx:number, posy:number): THREE.Mesh {
+    const geometry: THREE.ConeGeometry = new THREE.ConeGeometry(x, y, 32);
     const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: 0x808080 });
     const cone: THREE.Mesh = new THREE.Mesh(geometry, material);
-    cone.position.x=-2
-    cone.position.y=2.3
+    cone.position.x=posx;
+    cone.position.y=posy;
     return cone
 }
