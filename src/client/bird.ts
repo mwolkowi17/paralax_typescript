@@ -1,13 +1,13 @@
 import * as THREE from 'three';
 
-export function Bird(): THREE.Mesh {
+export function Bird(x:number, y:number): THREE.Mesh {
     const geometry: THREE.BoxGeometry = new THREE.BoxGeometry(0.2, 1, 0.2);
 
     const material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
     const box: THREE.Mesh = new THREE.Mesh(geometry, material);
 
-    box.position.y = 2;
-    box.position.z = 3;
+    box.position.y = x;
+    box.position.z = y;
     box.rotation.z = Math.PI / 3;
 
     const box2: THREE.Mesh = new THREE.Mesh(geometry, material);
