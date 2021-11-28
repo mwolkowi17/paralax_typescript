@@ -5,6 +5,7 @@ import { Layer1 } from './layer1';
 import { Layer2 } from './layer2';
 import { Layer3 } from './layer3';
 import { Layer4 } from './layer4';
+import { Bird } from './bird';
 
 const scene = new THREE.Scene()
 scene.background=new THREE.Color(0x7fbfff)
@@ -23,6 +24,7 @@ scene.add(Layer1);
 scene.add(Layer2);
 scene.add(Layer3);
 scene.add(Layer4);
+scene.add(Bird());
 
 
 
