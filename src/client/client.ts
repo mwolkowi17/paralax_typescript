@@ -20,12 +20,18 @@ document.body.appendChild(renderer.domElement)
 const controls = new OrbitControls(camera, renderer.domElement)
 controls.enableRotate=true;
 
+const bird1: THREE.Mesh=Bird(3,2)
+const bird2: THREE.Mesh=Bird(4,3)
+const bird3: THREE.Mesh=Bird(5,4)
+
 scene.add(Layer1);
 scene.add(Layer2);
 scene.add(Layer3);
 scene.add(Layer4);
-const bird1: THREE.Mesh=Bird(3,2)
+
 scene.add(bird1);
+scene.add(bird2);
+scene.add(bird3)
 
 
 
@@ -41,13 +47,6 @@ function onWindowResize() {
 function animate() {
     requestAnimationFrame(animate)
 
-    //cube.rotation.x += 0.01
-    //cube.rotation.y += 0.01
-    /*while(bird1.position.x<8){
-        bird1.position.x +=0.01;
-    }*/
-    
-    
     controls.update()
 
     render()
@@ -60,11 +59,26 @@ function render() {
 }
 
 renderer.setAnimationLoop( function () {
-    if ( bird1.position.x < 5) {
+    if ( bird1.position.x < 6) {
       bird1.position.x += 0.01;
     }else{
-        bird1.position.x=-3
+        bird1.position.x=-6
     }
+
+    if (bird3.position.x < 6){
+        bird3.position.x+= 0.02;
+    }else{
+        bird3.position.x=-7
+    }
+
+    if ( bird2.position.x >-6){
+        bird2.position.x-=0.01;
+    }else{
+        bird2.position.x=6
+    }
+
+     
+
     renderer.render( scene, camera );
   } );
 const maindocument: HTMLElement = document.body;
