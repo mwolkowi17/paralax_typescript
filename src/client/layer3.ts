@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { Mountain } from './mountain';
+import { Mountain } from './models/mountain';
 
 function getRandomInt(min: number, max: number) {
     min = Math.ceil(min);

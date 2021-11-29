@@ -1,6 +1,5 @@
 import * as THREE from 'three';
-import { blueSky } from './sky';
-import { sun } from './sun';
+import { sun } from './models/sun';
 
 
 export const Layer1: THREE.Group=new THREE.Group();

@@ -1,7 +1,7 @@
 import * as THREE from 'three'
-import { grass } from './grass';
-import { Leaf } from './leaf';
-import { tree } from './tree';
+import { grass } from './models/grass';
+import { Leaf } from './models/leaf';
+import { tree } from './models/tree';
 
 export function grassContainer(): THREE.Object3D {
     const object: THREE.Object3D = new THREE.Object3D;

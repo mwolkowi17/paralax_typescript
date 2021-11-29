@@ -1,11 +1,10 @@
 import * as THREE from 'three'
-import { Color } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Layer1 } from './layer1';
 import { Layer2 } from './layer2';
 import { Layer3 } from './layer3';
 import { Layer4 } from './layer4';
-import { Bird } from './bird';
+import { Bird } from './models/bird';
 
 const scene = new THREE.Scene()
 scene.background=new THREE.Color(0x7fbfff)
@@ -18,7 +17,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableRotate=true;
+controls.enableRotate=false;
 
 const bird1: THREE.Mesh=Bird(3,2)
 const bird2: THREE.Mesh=Bird(4,3)
