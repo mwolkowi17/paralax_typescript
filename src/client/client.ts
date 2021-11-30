@@ -58,19 +58,19 @@ function render() {
 }
 
 renderer.setAnimationLoop( function () {
-    if ( bird1.position.x < 6) {
+    if ( bird1.position.x < 12) {
       bird1.position.x += 0.01;
     }else{
-        bird1.position.x=-6
+        bird1.position.x=-14
     }
 
-    if (bird3.position.x < 6){
+    if (bird3.position.x < 12){
         bird3.position.x+= 0.02;
     }else{
-        bird3.position.x=-7
+        bird3.position.x=-14
     }
 
-    if ( bird2.position.x >-6){
+    if ( bird2.position.x >-12){
         bird2.position.x-=0.01;
     }else{
         bird2.position.x=6

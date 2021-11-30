@@ -14,7 +14,7 @@ export function grassContainer(): THREE.Object3D {
     }
     let r: number = 1
     while (r < 5000) {
-        object.add(Leaf((getRandomInt(-10, 8)+getRandomInt(-100,100)/100), (getRandomInt(-1, 4)+getRandomInt(-100,100)/100)));
+        object.add(Leaf((getRandomInt(-12, 10)+getRandomInt(-100,100)/100), (getRandomInt(-1, 4)+getRandomInt(-100,100)/100)));
         r++
     }
     object.add(tree(2));
