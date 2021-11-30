@@ -4,9 +4,10 @@ import { Layer1 } from './layer1';
 import { Layer2 } from './layer2';
 import { Layer3 } from './layer3';
 import { Layer4 } from './layer4';
+import { gltfLoader } from './loader1';
 import { Bird } from './models/bird';
 
-const scene = new THREE.Scene()
+export const scene = new THREE.Scene()
 scene.background=new THREE.Color(0x7fbfff)
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
@@ -17,7 +18,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableRotate=false;
+controls.enableRotate=true;
 
 const bird1: THREE.Mesh=Bird(3,2)
 const bird2: THREE.Mesh=Bird(4,3)
@@ -27,6 +28,7 @@ scene.add(Layer1);
 scene.add(Layer2);
 scene.add(Layer3);
 scene.add(Layer4);
+//scene.add(MountainLoad());
 
 scene.add(bird1);
 scene.add(bird2);
